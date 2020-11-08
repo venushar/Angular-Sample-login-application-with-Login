@@ -1,0 +1,16 @@
+﻿<!-- nav -->
+<nav class="navbar navbar-expand navbar-dark bg-dark" >
+    <div class="navbar-nav">      
+
+        <a class="nav-item nav-link" routerLink="/">Home</a>
+        <button mat-button (click)="logout()"  *ngIf="isLoggedIn"> logout</button>
+        <a  *ngIf="!isLoggedIn" class="nav-item nav-link" routerLink="/login">Login</a>
+        <div class="nav-item nav-link"  *ngIf="isLoggedIn"> Hello {{name}}</div>
+        <a class="nav-item nav-link" routerLink="/users">Users</a>
+    </div>
+</nav>
+<!-- main app container -->
+<div class="container">
+    <router-outlet></router-outlet>
+</div>
+
